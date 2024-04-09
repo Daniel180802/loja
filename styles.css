@@ -1,0 +1,489 @@
+/* /* styles.css */
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo para a barra de busca */
+.barra-busca {
+    margin-bottom: 20px;
+}
+
+#termo-busca {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#btn-buscar {
+    padding: 10px;
+    background-color: #ffc800;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-buscar:hover {
+    background-color: #b36b00;
+}
+
+
+/* Estilo para Produtos em Destaque */
+.produto {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f8f7d7e2; /* Cor de fundo para produtos em destaque */
+}
+
+.produto img {
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    margin: 0;
+    font-size: 18px;
+    
+}
+
+.produto .preco {
+    color: #6c757d; /* Cor do preço para produtos em destaque */
+    margin: 5px 0;
+}
+
+.produto a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color:  #35dc4b; /* Cor do botão para produtos em destaque */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.produto a:hover {
+    background-color: #62c823; /* Cor do botão ao passar o mouse para produtos em destaque */
+}
+
+/* Estilo para produtos em destaque em telas menores */
+@media screen and (max-width: 768px) {
+    .produto {
+        width: 45%;
+        margin: 2.5%;
+    }
+}
+
+/* Estilo para tornar os botões responsivos */
+.produto a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color:  #35dc4b; /* Cor do botão para produtos em destaque */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Faz o botão ocupar 100% da largura do .produto */
+    box-sizing: border-box; /* Evita que o padding aumente a largura do botão */
+    margin-top: 10px; /* Espaçamento entre botões */
+}
+
+.produto a:hover {
+    background-color: #62c823; /* Cor do botão ao passar o mouse para produtos em destaque */
+}
+
+/* Estilo para os produtos em promoção */
+.produto-promocao {
+    width: calc(25% - 20px); /* Calculando 25% da largura da tela menos 20px de margem */
+    max-width: 300px; /* Largura máxima de 200px para cada produto */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f8f7d7e2; /* Cor de fundo para produtos em promoção */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.produto-promocao img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.produto-promocao h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.produto-promocao .preco-antigo {
+    color: #6c757d; /* Cor do preço antigo para produtos em promoção */
+    text-decoration: line-through;
+    margin: 5px 0;
+}
+
+.produto-promocao .preco-atual {
+    font-weight: bold;
+    color: #35dc4b; /* Cor do preço atual para produtos em promoção */
+    margin: 5px 0;
+}
+
+.produto-promocao a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color:  #35dc4b; /* Cor do botão para produtos em promoção */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.produto-promocao a:hover {
+    background-color: #62c823; /* Cor do botão ao passar o mouse para produtos em promoção */
+}
+
+
+/* Estilo para os títulos das seções */
+h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+
+
+
+/* Estilo para os produtos da temporada */
+.prod_temporada {
+    width: calc(33.33% - 20px); /* Calculando 33.33% da largura da tela menos 20px de margem */
+    max-width: 300px; /* Largura máxima de 300px para cada produto */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f0f0f0; /* Cor de fundo para produtos da temporada */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.prod_temporada img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.prod_temporada h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.prod_temporada .preco {
+    color: #35dc4b; /* Cor do preço para produtos da temporada */
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.prod_temporada .descricao {
+    color: #6c757d; /* Cor da descrição para produtos da temporada */
+    margin-bottom: 10px;
+}
+
+.prod_temporada a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #35dc4b; /* Cor do botão para produtos da temporada */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.prod_temporada a:hover {
+    background-color: #62c823; /* Cor do botão ao passar o mouse para produtos da temporada */
+}
+
+
+
+/* Estilo para os depoimentos */
+.depoimentos {
+    margin-top: 30px;
+}
+
+.depoimentos .linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.depoimentos .col-3 {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.depoimentos .col-3 img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.depoimentos .depoimento-icone {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.depoimentos .classificacao {
+    margin-bottom: 10px;
+}
+
+.depoimentos .classificacao ion-icon {
+    font-size: 20px;
+    color: #ffc107;
+}
+
+.depoimentos h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Estilo para as marcas */
+.marcas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.marcas img {
+    max-width: 1100px;
+    margin: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Estilos específicos para a seção "Empresa" */
+.empresa-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.descricao {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.valores-list {
+    margin-bottom: 20px;
+}
+
+.valores-list li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.contato-form {
+    margin-top: 30px;
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contato-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contato-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+   
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: antiquewhite;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    table th, .table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    
+    table td {
+        vertical-align: middle;
+    }
+    
+    total {
+        text-align: right;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    btn-finalizar, .btn-remover {
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    btn-finalizar {
+        background-color: #007bff;
+        color: #fff;
+        margin-right: 10px; /* Adicionado para espaçamento */
+    }
+    
+    btn-finalizar:hover {
+        background-color: #0056b3;
+    }
+    
+    btn-remover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+    
+    btn-remover:hover {
+        background-color: #c82333;
+    }
+    
+    imagem-produto {
+        max-width: 80px; /* Ajuste para largura da imagem */
+        height: auto;
+    }
+    
+    form-remover {
+        display: inline; /* Para o form não ocupar toda a largura da célula */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .produtos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .produto {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .produto:hover {
+        transform: translateY(-5px);
+    }
+    
+    .produto-imagem {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    p {
+        margin: 5px 0;
+    }
+    
+    .btn-adicionar {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-adicionar:hover {
+        background-color: #0056b3;
+    }
+    
+    
