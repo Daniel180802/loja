@@ -1,0 +1,49 @@
+<?php
+session_start();
+
+// Aqui você pode definir os detalhes do produto, como ID, nome, preço, imagem, etc.
+$produto = [
+    'produto_id' => 1,
+    'nome' => 'Blusa de Frio',
+    'preco' => 6000.00,
+    'imagem' => 'blusa-frio.jpg'
+];
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ver-produto">
+            <div class="produto-img">
+                <img src="<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>">
+            </div>
+            <div class="produto-info">
+                <h2><?php echo $produto['nome']; ?></h2>
+                <h4>R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></h4>
+                <p>Descrição: Lorem ipsum dolor sit amet consectetur adipisicing elit. At, archi</p>
+                <!-- Formulário para adicionar ao carrinho -->
+                <form action="adicionar_carrinho.php" method="post">
+                    <input type="hidden" name="produto_id" value="<?php echo $produto['produto_id']; ?>">
+                    <label for="tamanho">Tamanho:</label>
+                    <select name="tamanho" id="tamanho">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" name="quantidade" id="quantidade" value="1">
+                    <button type="submit" class="btn">Adicionar ao Carrinho</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
